@@ -2,13 +2,13 @@
 
 namespace App\Controllers;
 
-class Home extends BaseController
+class Tasks extends BaseController
 {
     public function index()
     {
         //return view('welcome_message');
         //echo view('header');
-        echo view('Home/index');
+        echo view('Tasks/index');
         //echo view('footer');
     }
 }
