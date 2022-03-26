@@ -8,7 +8,7 @@
 
   <ul class="task-list">
      <?php foreach($tasks as $task): ?>
-         <li><?php echo 'ID: ' . $task['id'] . ' ' . $task['description']; ?></li>
+         <li><?php echo $task['description']; ?></li>
      <?php endforeach; ?>
   </ul>
 

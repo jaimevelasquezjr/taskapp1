@@ -4,14 +4,20 @@ namespace App\Controllers;
 
 class Tasks extends BaseController
 {
-    public function index()
-    {
+   public function index()
+   {
+      $model = new \App\Models\TaskModel;
+      $data = $model->findAll();
 
-        $data = [
-            ['id' => '1', 'description' => 'First Task' ],
-            ['id' => '2', 'description' => 'Second Task' ]
-        ];
+      dd($data);
 
-        return view('Tasks/index', ['tasks' => $data]);
-    }
+      return view('Tasks/index', ['tasks' => $data]);
+   }
+
+   public function show($id)
+   {
+      $model = new \App\Models\TaskModel;
+      $data = $model->find($id);
+      dd($data);
+   }
 }
