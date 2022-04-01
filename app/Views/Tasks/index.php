@@ -8,7 +8,7 @@
 
   <ul class="task-list">
      <?php foreach($tasks as $task): ?>
-         <li><?php echo $task['description']; ?></li>
+         <li><a href="<?= site_url('tasks/show/' . $task['id']); ?>"><?php echo $task['description']; ?></a></li>
      <?php endforeach; ?>
   </ul>
 
